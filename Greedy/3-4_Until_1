@@ -1,0 +1,17 @@
+# 내가 푼 방법
+
+import sys
+import time
+input = sys.stdin.readline
+
+n, k = map(int, input().split())
+
+count = 0  # 최소 횟수를 나타내는 count 변수 초기값 0 설정
+while(n != 1):   # n이 1이 될 때까지 반복
+    if(n % k == 0):   # 나누어 떨어지는 수이면
+        n = n/k   # n 을 k로 나누고 n을 그 몫으로 할당
+        count += 1  # 계산 +1
+    else:   # 나누어 떨어지는 수가 아니면
+        n -= 1     
+        count += 1
+print(count)
