@@ -18,3 +18,4 @@ for fear in sorted_fear_list:
 
 print(group)
 
+
