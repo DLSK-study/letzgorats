@@ -44,3 +44,4 @@ for num in s[1:]:
         answer *= int(num)
 print(answer)
 
+
