@@ -17,3 +17,4 @@ for fear in sorted_fear_list:
         count = 0   # count 초기화
 
 print(group)
+
