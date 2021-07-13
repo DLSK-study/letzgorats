@@ -17,3 +17,5 @@ for i in range(n):
             max_of_entire_min = current_min
 
 print(max_of_entire_min)
+
+
