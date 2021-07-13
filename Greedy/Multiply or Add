@@ -1,0 +1,11 @@
+# 내가 푼 방법
+
+import sys
+input = sys.stdin.readline
+
+s = input()
+s = s.replace('0', '').strip()  # 어차피 0은 더해야 하니까 곱하면 안되므로 그냥 없애주면 된다.
+answer = 1
+for num in s:
+    answer *= int(num)
+print(answer)
