@@ -15,3 +15,4 @@ for num in sorted_number_list[:2]:    # 내림차순으로 정렬된 number_list
     total += num*k*(m//k)   # 가장 큰 수를 k번 곱하는 작업이 (m//k)만큼 반복되므로 그만큼 곱해준다. 
     m %= k                 # 이제 남은 횟수는 m % k 만큼이다.
 print(total)
+
