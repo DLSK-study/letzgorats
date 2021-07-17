@@ -1,3 +1,5 @@
+# 내가 푼 방법
+
 import sys
 input = sys.stdin.readline
 
