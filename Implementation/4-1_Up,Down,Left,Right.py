@@ -28,5 +28,5 @@ for cmd in plan:
             continue
         else:
             current_Y -= 1
-
+            
 print(current_Y+1, current_X+1)
