@@ -108,3 +108,47 @@ while S!=count:
     
 
 print(graph[X-1][Y-1]) 
+
+##########################################################################################################################################################################
+# 구글링 풀이
+
+import sys
+from collections import deque
+import copy
+input = sys.stdin.readline
+
+n, k = map(int, input().split())
+graph = [] # 전체 맵 정보 담는 리스트
+virus_list =[] # 바이러스 정보를 담는 리스트
+
+for i in range(n):
+    graph.append(list(map(int, input().split())))
+    for j in range(n):
+        if graph[i][j] != 0:
+            # 바이러스 숫자, x위치, y위치, 시간 을 입력받는다.
+            virus_list.append((graph[i][j], i, j, 0))
+
+S, X, Y = map(int, input().split())
+
+dx = [-1, 1, 0, 0] # 상 하 좌 우
+dy = [0, 0, -1, 1] # 상 하 좌 우
+
+virus_list.sort() # 바이러스 번호가 작은 순서대로 정렬된다.
+# print(virus_list)
+q = deque(virus_list)
+# print(q)
+
+while q:
+    virus_num, x, y, time = q.popleft()
+    if time == S:
+        break
+    for i in range(4):
+        nx = x + dx[i]
+        ny = y + dy[i]
+        if 0 <= nx < n and 0 <= ny < n:
+            if graph[nx][ny] == 0:
+                graph[nx][ny] = virus_num
+                q.append((virus_num, nx, ny, time+1))
+                # print(q,'**')
+
+print(graph[X-1][Y-1])
