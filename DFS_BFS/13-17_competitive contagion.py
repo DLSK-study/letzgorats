@@ -1,4 +1,5 @@
-# 정확도는 맞지만, 백준 돌리면 시간초과가 나온다,,
+# 정확도는 맞지만, 백준 python3로 돌리면 시간초과가 나온다,,
+# 백준 PyPy3 로 돌리면, 통과 된다.
 # 너무 함수를 많이 짠 것 같다.
 # 테스트 케이스 성공은 다 맞다.
 '''
@@ -104,8 +105,6 @@ while S!=count:
     select_virus(count,graph,virus_list)  #  1초 동안 현재 시험관에서 바이러스 퍼뜨린다.
     count+=1 # 1초 흐름
     wall_graph = update_graph(graph) # 현재 시험관 기준으로 바이러스 위치는 True, 청정지역은 False
-    if(all(wall_graph)):  # 이미 모두 다 퍼졌다면, 더 이상 시간 진행 안해도 된다.
-        break
-    # print(count,"cccc")
+    
 
 print(graph[X-1][Y-1]) 
