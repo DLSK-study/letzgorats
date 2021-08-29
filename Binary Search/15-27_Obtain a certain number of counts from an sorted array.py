@@ -10,3 +10,4 @@ if count_list[x] == 0 :
     print(-1)
 else:
     print(count_list[x])
+    
