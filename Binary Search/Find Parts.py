@@ -14,7 +14,7 @@ def binary_search(array,target,start,end):
     return None
 
 n = int(input())
-product_list = list(map(int,input().split()))
+product_list = sorted(list(map(int,input().split())))
 m = int(input())
 wanna_get = list(map(int,input().split()))
 
